@@ -15,9 +15,9 @@
                 <h2>Follow Me</h2>
                 
                 <div class="site-footer__social-links">
-                    <?php include 'includes/icons/icon_instagram.php'?>
-                    <?php include 'includes/icons/icon_linkedin.php'?>
-                    <?php include 'includes/icons/icon_github.php'?>
+                    <a href="https://www.instagram.com/kesh.does.art" target="_blank"><?php include 'includes/icons/icon_instagram.php'?></a>
+                    <a href="https://www.linkedin.com/in/keshti-gyllinger/" target="_blank"><?php include 'includes/icons/icon_linkedin.php'?></a>
+                    <a href="https://github.com/KeshtiG" target="_blank"><?php include 'includes/icons/icon_github.php'?></a>
                 </div>
             </div>
         </div>
