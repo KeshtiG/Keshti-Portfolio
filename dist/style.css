@@ -94,6 +94,7 @@ strong {
   font-weight: 700;
   font-size: 1.1rem;
   color: var(--link);
+  transition: all 0.3s ease-in-out;
 }
 .btn:hover {
   background-color: var(--bg-body);
@@ -283,8 +284,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8% 4% 4%;
-  margin-bottom: 8%;
+  padding: 8% 4%;
+}
+@media (max-width: 1700px) {
+  .hero {
+    margin-bottom: 0;
+  }
 }
 .hero__content {
   width: 100%;
@@ -392,16 +397,37 @@ img {
 .site-footer {
   background-color: var(--bg-navbar);
   margin-top: 24vh;
+  text-align: center;
+}
+@media (max-width: 550px) {
+  .site-footer {
+    margin-top: 16vh;
+  }
+  .site-footer h2 {
+    font-size: 2rem;
+  }
 }
 .site-footer__container {
-  min-height: 36vh;
+  min-height: 48vh;
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  gap: 8vh;
+  gap: 8vw;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .site-footer__container {
+    gap: 4vw;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer__container {
+    flex-direction: column;
+    gap: 8vh;
+    padding: 8% 4%;
+  }
 }
 .site-footer__social-container {
   display: flex;
@@ -410,6 +436,14 @@ img {
   justify-content: center;
   gap: 2vh;
   width: 33%;
+  order: 3;
+  flex-grow: 2;
+}
+@media (max-width: 768px) {
+  .site-footer__social-container {
+    width: 100%;
+    order: 2;
+  }
 }
 .site-footer__social-links {
   display: flex;
@@ -431,6 +465,18 @@ img {
   justify-content: center;
   width: 33%;
   gap: 1rem;
+  order: 2;
+}
+@media (max-width: 1100px) {
+  .site-footer__identity {
+    width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .site-footer__identity {
+    width: 100%;
+    order: 3;
+  }
 }
 .site-footer__logo {
   background-image: url("../assets/img/logo.svg");
@@ -440,6 +486,18 @@ img {
   width: 160px;
   height: 160px;
 }
+@media (max-width: 1100px) {
+  .site-footer__logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .site-footer__logo {
+    width: 80px;
+    height: 80px;
+  }
+}
 .site-footer__github-info {
   display: flex;
   flex-direction: column;
@@ -447,6 +505,13 @@ img {
   justify-content: center;
   gap: 0.5rem;
   width: 33%;
+  order: 1;
+  flex-grow: 2;
+}
+@media (max-width: 768px) {
+  .site-footer__github-info {
+    width: 100%;
+  }
 }
 .site-footer__github-info .github-link {
   margin-top: 1rem;
@@ -466,7 +531,7 @@ main {
 }
 @media screen and (max-width: 1700px) {
   main {
-    padding: 2% 4%;
+    padding: 8% 4%;
   }
 }
 
@@ -741,15 +806,70 @@ main {
   }
 }
 
+.main-index {
+  padding-top: 0;
+}
+
+.under-construction {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(to top, var(--bg-navbar), transparent);
+  border-right: 3px solid var(--bg-navbar);
+  border-left: 3px solid var(--bg-navbar);
+  border-bottom: 3px solid var(--bg-navbar);
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto;
+}
+.under-construction .icon {
+  color: #736383;
+}
+@media (max-width: 550px) {
+  .under-construction {
+    padding: 1rem 0.5rem 0.5rem;
+  }
+  .under-construction .icon {
+    display: none;
+  }
+}
+.under-construction__text {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 550px) {
+  .under-construction__text {
+    text-align: center;
+  }
+}
+.under-construction__title {
+  font-size: 2rem;
+  font-family: "Gabarito", sans-serif;
+  color: var(--text-heading);
+}
+@media (max-width: 550px) {
+  .under-construction__title {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
 .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12vh;
+  gap: 14vh;
 }
 @media (max-width: 768px) {
   .projects {
     gap: 8vh;
+  }
+}
+@media (max-width: 550px) {
+  .projects {
+    gap: 6vh;
   }
 }
 .projects__page-title {
@@ -759,21 +879,28 @@ main {
   padding: 1% 2%;
   border-bottom: 3px solid var(--accent);
 }
+@media (max-width: 768px) {
+  .projects__page-title h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .projects__page-title h1 {
+    font-size: 1.8rem;
+  }
+}
 .projects__page-title .icon {
   color: var(--accent);
   width: 40px;
 }
 @media (max-width: 768px) {
-  .projects__page-title h1 {
-    font-size: 2.5rem;
-  }
   .projects__page-title .icon {
     width: 32px;
   }
 }
 @media (max-width: 550px) {
-  .projects__page-title h1 {
-    font-size: 2.1rem;
+  .projects__page-title .icon {
+    width: 24px;
   }
 }
 

@@ -2,7 +2,7 @@
         <div class="site-footer__container">
             <div class="site-footer__github-info">
                 <h2>Site Info</h2>
-                <p>This site was created with PHP, Sass & JavaScript</p>
+                <p>This site was created with PHP, Sass/BEM & JavaScript</p>
                 <a href="https://github.com/KeshtiG/Keshti-Portfolio" class="btn github-link" target="_blank"><?php include 'includes/icons/icon_github.php'?>View on GitHub</a>
             </div>
     

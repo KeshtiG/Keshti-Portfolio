@@ -64,6 +64,7 @@ strong {
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--link);
+    transition: $transition-all-03;
 
     &:hover {
         background-color: var(--bg-body);

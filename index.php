@@ -25,10 +25,18 @@
 </section>
 
 
-<main>
+<main class="main-index">
+    <div class="under-construction">
+        <?php include 'includes/icons/icon_hammer.php' ?>
+        <div class="under-construction__text">
+            <p class="under-construction__title">Under construction</p>
+            <p>Most links still lead to my old Wix portfolio, hang tight!</p>
+        </div>
+    </div>
+
     <section class="projects">
         <div class="projects__page-title">
-            <?php include 'includes/icons/icon_sparkle.php'?>
+            <?php include 'includes/icons/icon_sparkle.php' ?>
             <h1>Showcased Projects</h1>
         </div>
         <?php

@@ -32,9 +32,9 @@
 
                 <ul class="nav__list">
                     <li class="nav__item <?= $currentPage == 'index.php' ? 'nav__item--active' : '' ?>"><a href="index.php" class="nav__link">Home</a></li>
-                    <li class="nav__item <?= $currentPage == 'about.php' ? 'nav__item--active' : '' ?>"><a href="about.php" class="nav__link">About</a></li>
-                    <li class="nav__item <?= $currentPage == 'projects.php' ? 'nav__item--active' : '' ?>"><a href="projects.php" class="nav__link">Projects</a></li>
-                    <li class="nav__item <?= $currentPage == 'contact.php' ? 'nav__item--active' : '' ?>"><a href="contact.php" class="nav__link">Contact</a></li>
+                    <li class="nav__item <?= $currentPage == 'about.php' ? 'nav__item--active' : '' ?>"><a href="https://keshti.wixsite.com/portfolio/about-me" class="nav__link">About</a></li>
+                    <li class="nav__item <?= $currentPage == 'projects.php' ? 'nav__item--active' : '' ?>"><a href="https://keshti.wixsite.com/portfolio/projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item <?= $currentPage == 'contact.php' ? 'nav__item--active' : '' ?>"><a href="https://keshti.wixsite.com/portfolio/contact" class="nav__link">Contact</a></li>
                 </ul>
 
                 <div class="theme-toggle" id="theme-toggle">

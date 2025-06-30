@@ -3,22 +3,47 @@
 .site-footer {
     background-color: var(--bg-navbar);
     margin-top: 24vh;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 16vh;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
 
     &__container {
-        min-height: 36vh;
+        min-height: 48vh;
         max-width: $max-width;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
-        gap: 8vh;
+        gap: 8vw;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: $breakpoint-desktop) {
+            gap: 4vw;
+        }
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+            gap: 8vh;
+            padding: $content-padding;
+        }
     }
 
     &__social-container {
         @include flex-center-column;
         gap: 2vh;
         width: 33%;
+        order: 3;
+        flex-grow: 2;
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+            order: 2;
+        }
     }
 
     &__social-links {
@@ -41,6 +66,16 @@
         @include flex-center-column;
         width: 33%;
         gap: 1rem;
+        order: 2;
+
+        @media (max-width: $breakpoint-desktop) {
+            width: 20%;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+            order: 3;
+        }
     }
 
     &__logo {
@@ -50,12 +85,28 @@
         background-repeat: no-repeat;
         width: 160px;
         height: 160px;
+
+        @media (max-width: $breakpoint-desktop) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 80px;
+            height: 80px;
+        }
     }
 
     &__github-info {
         @include flex-center-column;
         gap: 0.5rem;
         width: 33%;
+        order: 1;
+        flex-grow: 2;
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+        }
 
         .github-link {
             margin-top: 1rem;

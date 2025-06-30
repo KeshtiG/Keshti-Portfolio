@@ -1,13 +1,71 @@
 @use '../base/variables' as *;
 
+.main-index {
+    padding-top: 0;
+}
+
+.under-construction {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+    // border: 3px solid $color-purple-5;
+    padding: 1rem 2rem;
+    background: linear-gradient(to top, var(--bg-navbar), transparent);
+
+    border-right: 3px solid var(--bg-navbar);
+    border-left: 3px solid var(--bg-navbar);
+    border-bottom: 3px solid var(--bg-navbar);
+    border-radius: 0 0 16px 16px;
+    margin: 0 auto;
+
+    .icon {
+        color: $color-purple-5;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        padding: 1rem 0.5rem 0.5rem;
+
+        .icon {
+            display: none;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $breakpoint-mobile) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-family: $font-heading;
+        color: var(--text-heading);
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+
+}
+
 .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12vh;
+    gap: 14vh;
 
     @media (max-width: $breakpoint-tablet) {
         gap: 8vh;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        gap: 6vh;
     }
 
     &__page-title {
@@ -17,24 +75,28 @@
         padding: 1% 2%;
         border-bottom: 3px solid var(--accent);
 
-        .icon {
-            color: var(--accent);
-            width: 40px;
-        }
-
         @media (max-width: $breakpoint-tablet) {
             h1 {
                 font-size: 2.5rem;
-            }
-
-            .icon {
-                width: 32px;
             }
         }
 
         @media (max-width: $breakpoint-mobile) {
             h1 {
-                font-size: 2.1rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        .icon {
+            color: var(--accent);
+            width: 40px;
+
+            @media (max-width: $breakpoint-tablet) {
+                width: 32px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                width: 24px;
             }
         }
     }

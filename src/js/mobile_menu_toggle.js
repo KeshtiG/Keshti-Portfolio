@@ -36,3 +36,5 @@ document.addEventListener('click', (event) => {
     document.body.classList.remove('mobile-menu-open')
   }
 });
+
+console.log('Hamburger script running')

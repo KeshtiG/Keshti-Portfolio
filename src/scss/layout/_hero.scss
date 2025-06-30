@@ -12,8 +12,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8% 4% 4%;
-    margin-bottom: 8%;
+    padding: $content-padding;
+    // margin-bottom: 12vh;
+
+    @media (max-width: $breakpoint-desktop-large) {
+        margin-bottom: 0;
+    }
 
     &__content {
         width: 100%;
