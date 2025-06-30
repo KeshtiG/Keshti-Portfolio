@@ -1,0 +1,62 @@
+@use "../base/variables" as *;
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2.5px var(--link);
+  
+  &__icon-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    z-index: 1;
+    position: relative;
+    font-size: 1.2rem;
+    transition: $transition-all-03;
+
+    &.theme-toggle__icon-container--active {
+      .theme-toggle__icon {
+        color: $color-purple-9; // Anpassa färg som du vill
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--link);
+    border: 2px solid var(--link);
+    transition: $transition-all-03;
+    z-index: 0;
+  }
+
+  &--light-active {
+    .theme-toggle__background {
+      left: 50%;
+    }
+  }
+}
+
+
+/********** MEDIA QUERIES **********/
+@media screen and (max-width: $breakpoint-tablet) {
+  .theme-toggle {
+    height: 48px;
+  }
+}
+

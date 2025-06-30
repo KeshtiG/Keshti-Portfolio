@@ -1,0 +1,80 @@
+@use "../base/variables" as *;
+
+// Base Styles
+h1,
+h2,
+h3 {
+    font-family: $font-heading;
+    color: var(--text-heading);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: $font-body;
+    color: var(--text-body);
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-body);
+
+    &.mobile-menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+html {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: 2px solid $color-link;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    font-family: $font-body;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--link);
+
+    &:hover {
+        background-color: var(--bg-body);
+        border-color: var(--accent);
+    }
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    display: block;
+}
+
+

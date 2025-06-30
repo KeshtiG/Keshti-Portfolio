@@ -1,0 +1,69 @@
+@use "../base/variables" as *;
+
+.site-footer {
+    background-color: var(--bg-navbar);
+    margin-top: 24vh;
+
+    &__container {
+        min-height: 36vh;
+        max-width: $max-width;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 8vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__social-container {
+        @include flex-center-column;
+        gap: 2vh;
+        width: 33%;
+    }
+
+    &__social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        color: var(--link);
+
+        .social-icon {
+            width: 40px;
+            transition: $transition-all-03;
+        }
+
+        .social-icon:hover {
+            color: var(--text-heading);
+        }
+    }
+
+    &__identity {
+        @include flex-center-column;
+        width: 33%;
+        gap: 1rem;
+    }
+
+    &__logo {
+        background-image: url("../assets/img/logo.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 160px;
+        height: 160px;
+    }
+
+    &__github-info {
+        @include flex-center-column;
+        gap: 0.5rem;
+        width: 33%;
+
+        .github-link {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+
+            .icon {
+                height: 24px;
+            }
+        }
+    }
+}

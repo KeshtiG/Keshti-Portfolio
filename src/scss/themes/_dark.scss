@@ -1,0 +1,17 @@
+@use "../base/variables" as *;
+
+:root {
+    --bg-body: #{$color-purple-10};
+    --bg-navbar: #{$color-purple-9};
+    --bg-footer: #{$color-purple-4};
+
+    --text-heading: #{$color-purple-1};
+    --text-body: #{$color-purple-3};
+    --text-accent: #{$color-accent};
+
+
+    --accent: #{$color-accent};
+    --link: #{$color-link};
+
+    --shadow-color: #00000040;
+}

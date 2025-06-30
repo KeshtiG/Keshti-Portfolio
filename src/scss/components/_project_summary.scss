@@ -1,0 +1,142 @@
+@use '../base/variables' as *;
+
+.project-summary {
+    display: flex;
+    align-items: center;
+    gap: 4%;
+
+    @media (max-width: $breakpoint-desktop-large) {
+        gap: 2%;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+    }
+
+    &__content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            width: 100%;
+        }
+    }
+
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 4%;
+
+        @media (max-width: $breakpoint-desktop-large) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        color: var(--text-body);
+        line-height: 1.6;
+
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__image {
+        width: 50%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px var(--shadow-color);
+
+        img {
+            border-radius: 16px;
+            display: block;
+            transition: $transition-all-03;
+            opacity: 0.95;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        @media screen and (max-width: $breakpoint-tablet) {
+            width: 100%;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2%;
+
+        @media (max-width: $breakpoint-tablet) {
+            margin: 2% 0;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            gap: 0.3rem;
+        }
+    }
+
+    &__tag {
+        background-color: var(--bg-navbar);
+        color: var(--text-accent);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 2px var(--shadow-color);
+
+        @media (max-width: $breakpoint-desktop-large) {
+            padding: 0.3rem 0.8rem;
+        }
+
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.5rem;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 4%;
+
+        p {
+            color: var(--link);
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: $transition-all-03;
+        }
+
+        &:hover p {
+            color: var(--text-heading);
+        }
+
+        // padding-bottom: 0.2rem;
+        // border-bottom: 3px solid var(--link);
+    }
+}
+
+.reverse-flex {
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+    }
+}

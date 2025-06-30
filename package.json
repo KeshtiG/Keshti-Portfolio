@@ -1,0 +1,17 @@
+{
+  "name": "codefolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass src/css/style.scss dist/style.css",
+      "sass:watch": "sass --watch src/scss/style.scss dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.89.1"
+  }
+}
