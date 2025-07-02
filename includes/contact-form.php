@@ -2,6 +2,7 @@
 session_start();
 
 require 'vendor/autoload.php';
+$config = require __DIR__ . '/../config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -43,14 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         $mail = new PHPMailer(true);
         try {
-            // SMTP settings — just example, replace with your details
+            // SMTP settings
             $mail->isSMTP();
-            $mail->Host = 'mail.inleed.com';
+            $mail->Host = $config['mail_host'];
             $mail->SMTPAuth = true;
-            $mail->Username = 'hello@keshti.se';
-            $mail->Password = 'kDKs8NTT8mMnyPe';
+            $mail->Username = $config['mail_user'];
+            $mail->Password = $config['mail_pass'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            $mail->Port = 465;
+            $mail->Port = $config['mail_port'];
 
             // Add UTF-8
             $mail->CharSet = 'UTF-8';
@@ -90,15 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <?php if ($success): ?>
-        <p style="color: green;"><?= htmlspecialchars($success) ?></p>
-    <?php endif ?>
-
-    <?php if ($errors): ?>
-        <ul style="color: red;">
-            <?php foreach ($errors as $error): ?>
-                <li><?= htmlspecialchars($error) ?></li>
-            <?php endforeach ?>
-        </ul>
+        <p class="contact-form__success"><?= htmlspecialchars($success) ?></p>
     <?php endif ?>
 
     <?php if (!$success): ?>
@@ -123,9 +116,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="contact-form__label">CAPTCHA <span class="contact-form__captcha"><?= $_SESSION['captcha_question'] ?></span></p>
                 <input class="contact-form__input" type="text" name="captcha" required />
             </label>
-            <button type="submit" class="contact-form__button btn"><?php include 'includes/icons/icon_send.php'?>Send Message</button>
+            <button type="submit" class="contact-form__button btn"><?php include 'includes/icons/icon_send.php' ?>Send Message</button>
         </form>
     <?php endif ?>
+    
+    <?php if ($errors): ?>
+        <ul class="contact-form__errors">
+            <?php foreach ($errors as $error): ?>
+                <li><?= htmlspecialchars($error) ?></li>
+            <?php endforeach ?>
+        </ul>
+    <?php endif ?>
+
 </body>
 
 </html>

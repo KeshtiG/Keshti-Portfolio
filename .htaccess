@@ -1,0 +1,29 @@
+# Disable directory listing to prevent users from browsing folders
+Options -Indexes
+
+# Deny direct access to sensitive files
+<FilesMatch "(^\.|config\.php|composer\.json|composer\.lock|package\.json|package-lock\.json|README\.md)">
+    Require all denied
+</FilesMatch>
+
+# Prevent direct access to the .htaccess file itself
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Block direct access to potentially dangerous file types
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|bak|swp)$">
+    Require all denied
+</FilesMatch>
+
+# Enable basic protection against cross-site scripting (XSS)
+Header set X-XSS-Protection "1; mode=block"
+
+# Prevent browsers from MIME-sniffing the content type
+Header set X-Content-Type-Options "nosniff"
+
+# Protect against clickjacking by restricting iframe embedding
+Header always append X-Frame-Options SAMEORIGIN
+
+# Set a default character encoding for all responses
+AddDefaultCharset UTF-8

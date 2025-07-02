@@ -24,3 +24,6 @@ Thumbs.db
 
 # Composer/Vendor
 vendor/
+
+# Config
+config.php

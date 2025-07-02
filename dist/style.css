@@ -978,35 +978,35 @@ main {
     gap: 4rem;
   }
 }
-.projects__page-title {
+.projects__title-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 1% 2%;
   border-bottom: 3px solid var(--accent);
 }
-@media (max-width: 1000px) {
-  .projects__page-title h1 {
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 600px) {
-  .projects__page-title h1 {
-    font-size: 1.8rem;
-  }
-}
-.projects__page-title .icon {
+.projects__title-container .icon {
   color: var(--accent);
   width: 40px;
 }
 @media (max-width: 850px) {
-  .projects__page-title .icon {
+  .projects__title-container .icon {
     width: 32px;
   }
 }
 @media (max-width: 600px) {
-  .projects__page-title .icon {
+  .projects__title-container .icon {
     width: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .projects__title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .projects__title {
+    font-size: 1.8rem;
   }
 }
 
@@ -1014,11 +1014,6 @@ main {
   height: 100%;
   background-color: var(--bg-body-darker);
   padding: 4% 0 2%;
-}
-@media (max-width: 600px) {
-  .instagram {
-    margin: 16% 0;
-  }
 }
 .instagram__container {
   position: relative;
@@ -1076,21 +1071,52 @@ main {
     padding-right: 4%;
   }
 }
+@media (max-width: 1000px) {
+  .contact-banner {
+    flex-direction: column;
+  }
+}
 .contact-banner__text-container {
   width: 60%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 1000px) {
+  .contact-banner__text-container {
+    width: 100%;
+  }
+}
 .contact-banner__title {
   font-size: 4rem;
   font-weight: 700;
 }
+@media (max-width: 1000px) {
+  .contact-banner__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 850px) {
+  .contact-banner__title {
+    font-size: 2.5rem;
+  }
+}
 .contact-banner__body {
   font-size: 1.6rem;
 }
+@media (max-width: 850px) {
+  .contact-banner__body {
+    font-size: 1.2rem;
+  }
+}
 .contact-banner__image {
   width: 40%;
+}
+@media (max-width: 850px) {
+  .contact-banner__image {
+    padding-top: 4rem;
+    width: 60%;
+  }
 }
 
 .contact {
@@ -1203,6 +1229,11 @@ main {
 }
 .contact-form__button {
   border: none;
+}
+.contact-form__success, .contact-form__errors {
+  font-size: 1.5rem;
+  color: var(--text-heading);
+  margin-top: 3rem;
 }
 .contact-form textarea {
   resize: vertical;

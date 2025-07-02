@@ -35,9 +35,9 @@
     </div>
 
     <section class="projects">
-        <div class="projects__page-title">
+        <div class="projects__title-container">
             <?php include 'includes/icons/icon_sparkle.php' ?>
-            <h2>Showcased Projects</h2>
+            <h2 class="projects__title">Showcased Projects</h2>
         </div>
         <?php
         include 'includes/projects-data.php';
