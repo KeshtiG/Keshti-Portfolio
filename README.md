@@ -1,6 +1,7 @@
 # Personal Portfolio
 
 This is my personal portfolio website, designed and developed to showcase my skills in UI/UX design, web development, and illustration.
+➡️ View the live project at [keshti.se](https://www.keshti.se)
 
 ## 🧰 Tech Stack
 
@@ -8,7 +9,6 @@ This is my personal portfolio website, designed and developed to showcase my ski
 - **Sass (SCSS)** – for styling with variables, mixins, and nesting
 - **JavaScript** – for interaction and UI behavior
 
-➡️ View the live project at [keshti.se](https://www.keshti.se)
 
 ## 🚀 Getting Started
 
