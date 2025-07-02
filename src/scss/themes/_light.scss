@@ -3,11 +3,13 @@
 body.light-theme {
     // Light Theme Variables
     --bg-body: #{$color-purple-2};
+    --bg-body-darker: #{$color-purple-3};
+    --bg-body-lighter: #{$color-purple-1};
     --bg-navbar: #{$color-purple-1};
     --bg-footer: #{$color-purple-1};
 
-    --text-heading: #{$color-purple-8};
-    --text-body: #{$color-purple-6};
+    --text-heading: #{$color-purple-9};
+    --text-body: #{$color-purple-7};
     --text-accent: #8330d1;
 
     --accent: #f3881d;

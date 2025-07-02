@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .hero {
     background-image: radial-gradient(circle at 44% 67%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 30%, transparent 30%, transparent 34%, transparent 34%, transparent 100%),
@@ -7,13 +8,10 @@
         radial-gradient(circle at 47% 44%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 96%, transparent 96%, transparent 97%, transparent 97%, transparent 100%),
         radial-gradient(circle at 34% 28%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 26%, transparent 26%, transparent 85%, transparent 85%, transparent 100%),
         linear-gradient(363deg, rgb(24, 19, 30), rgb(0, 0, 0));
-
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $content-padding;
-    // margin-bottom: 12vh;
 
     @media (max-width: $breakpoint-desktop-large) {
         margin-bottom: 0;
@@ -26,6 +24,18 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        margin-top: 4rem;
+
+        @media (max-width: $breakpoint-desktop-large) {
+            @include content-container;
+        }
+
+        @media (max-width: $breakpoint-desktop) {
+            padding-top: 4%;
+            padding-bottom: 4%;
+        }
 
         @media (max-width: $breakpoint-tablet) {
             flex-direction: column;
@@ -36,7 +46,7 @@
         @media (max-width: $breakpoint-mobile) {
             flex-direction: column;
             align-items: center;
-            margin-top: 16%;
+            margin-top: 10%;
         }
     }
 
@@ -60,7 +70,7 @@
         }
     }
 
-    &__text {
+    &__text-container {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -81,12 +91,15 @@
         @media (max-width: $breakpoint-desktop-large) {
             font-size: 10rem;
         }
+
         @media (max-width: $breakpoint-desktop) {
             font-size: 8rem;
         }
+
         @media (max-width: $breakpoint-tablet) {
             font-size: 8rem;
         }
+
         @media (max-width: $breakpoint-mobile) {
             font-size: 6rem;
         }

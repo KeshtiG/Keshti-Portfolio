@@ -1,7 +1,9 @@
 @use '../base/variables' as *;
+@use "../base/mixins" as *;
 
 .main-index {
     padding-top: 0;
+    margin-top: 0;
 }
 
 .under-construction {
@@ -10,29 +12,37 @@
     width: fit-content;
     align-items: center;
     gap: 1rem;
-    // border: 3px solid $color-purple-5;
     padding: 1rem 2rem;
     background: linear-gradient(to top, var(--bg-navbar), transparent);
+    margin: 0 4%;
+    align-self: center;
 
     border-right: 3px solid var(--bg-navbar);
     border-left: 3px solid var(--bg-navbar);
     border-bottom: 3px solid var(--bg-navbar);
     border-radius: 0 0 16px 16px;
-    margin: 0 auto;
-
-    .icon {
-        color: $color-purple-5;
-    }
 
     @media (max-width: $breakpoint-mobile) {
         padding: 1rem 0.5rem 0.5rem;
+    }
 
-        .icon {
+    &__icon {
+        color: $color-purple-5;
+        width: 64px;
+        height: 64px;
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
             display: none;
         }
     }
 
-    &__text {
+
+    &__text-container {
         display: flex;
         flex-direction: column;
 
@@ -46,9 +56,19 @@
         font-family: $font-heading;
         color: var(--text-heading);
 
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 1.6rem;
+        }
+
         @media (max-width: $breakpoint-mobile) {
             font-size: 1.4rem;
             margin-bottom: 0.4rem;
+        }
+    }
+
+    &__body {
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 1rem;
         }
     }
 
@@ -58,14 +78,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14vh;
+    gap: 10rem;
+    @include content-container;
 
-    @media (max-width: $breakpoint-tablet) {
-        gap: 8vh;
+    @media (max-width: $breakpoint-desktop-large) {
+        gap: 10rem;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+        gap: 8rem;
+    }
+
+    @media (max-width: $breakpoint-tablet-large) {
+        gap: 6rem;
     }
 
     @media (max-width: $breakpoint-mobile) {
-        gap: 6vh;
+        gap: 4rem;
     }
 
     &__page-title {
@@ -75,7 +104,7 @@
         padding: 1% 2%;
         border-bottom: 3px solid var(--accent);
 
-        @media (max-width: $breakpoint-tablet) {
+        @media (max-width: $breakpoint-tablet-large) {
             h1 {
                 font-size: 2.5rem;
             }
@@ -99,5 +128,81 @@
                 width: 24px;
             }
         }
+    }
+}
+
+
+.instagram {
+    height: 100%;
+    background-color: var(--bg-body-darker);
+    padding: 4% 0 2%;
+
+    @media (max-width: $breakpoint-mobile) {
+        margin: 16% 0;
+    }
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+        @include content-container;
+    }
+
+    &__cutoff-mask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: var(--bg-body-darker);
+        z-index: 99999 !important;
+    }
+
+    .eapps-instagram-feed-posts-grid-load-more {
+        border: 3px solid var(--link);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        height: auto;
+        color: var(--text-heading);
+        font-family: $font-body;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+    }
+
+    .eapps-instagram-feed-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        color: var(--text-heading);
+        margin-bottom: 2rem;
+    }
+
+    .eapps-instagram-feed-posts-item {
+        background: transparent;
+    }
+}
+
+.contact-banner {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    @include content-container;
+
+    &__text-container {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    &__body {
+        font-size: 1.6rem;
+    }
+
+    &__image {
+        width: 40%;
     }
 }

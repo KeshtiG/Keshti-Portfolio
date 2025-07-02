@@ -1,14 +1,25 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 main {
     min-height: 100vh;
-    max-width: $max-width;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 8vh;
+    gap: 10rem;
+    margin-top: 12rem;
 
     @media screen and (max-width: $breakpoint-desktop-large) {
-        padding: $content-padding;
+        margin-top: 10rem;
+        gap: 8rem;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+        margin-top: 8rem;
+        gap: 6rem;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+        margin-top: 6rem;
+        gap: 4rem;
     }
 }

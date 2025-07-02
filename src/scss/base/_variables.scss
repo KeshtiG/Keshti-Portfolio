@@ -2,16 +2,18 @@
 $color-accent: #f2a354;
 $color-link: #45c0c4;
 
-$color-purple-10: #110f15;
-$color-purple-9:  #1f1922;
-$color-purple-8:  #241f29;
-$color-purple-7:  #382e42;
-$color-purple-6:  #4d4059;
-$color-purple-5:  #736383;
-$color-purple-4:  #998da5;
-$color-purple-3:  #cfc1dd;
-$color-purple-2:  #eae5ef;
-$color-purple-1:  #f7f5fa;
+$color-purple-12: #0d0b0f;
+$color-purple-11: #110f15;
+$color-purple-10: #201a24;
+$color-purple-9: #241f29;
+$color-purple-8: #382e42;
+$color-purple-7: #4d4059;
+$color-purple-6: #736383;
+$color-purple-5: #998da5;
+$color-purple-4: #cfc1dd;
+$color-purple-3: #dbd5e2;
+$color-purple-2: #eae5ef;
+$color-purple-1: #f7f5fa;
 
 // Font Variables
 $font-heading: 'Gabarito', sans-serif;
@@ -23,20 +25,12 @@ $transition-all-03: all 0.3s ease-in-out;
 
 // Spacing Variables
 $max-width: 1600px;
-$content-padding: 8% 4%;
+$content-padding: 0 4%;
+$content-side-padding: 4%;
 
 // Breakpoints
-$breakpoint-mobile: 550px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1100px;
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 850px;
+$breakpoint-tablet-large: 1000px;
+$breakpoint-desktop: 1400px;
 $breakpoint-desktop-large: 1700px;
-
-
-// Mixins
-@mixin flex-center-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-

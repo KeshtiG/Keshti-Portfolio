@@ -2,7 +2,7 @@
         <div class="site-footer__container">
             <div class="site-footer__github-info">
                 <h2>Site Info</h2>
-                <p>This site was created with PHP, Sass/BEM & JavaScript</p>
+                <p>This site was created with PHP, Sass + BEM & JavaScript</p>
                 <a href="https://github.com/KeshtiG/Keshti-Portfolio" class="btn github-link" target="_blank"><?php include 'includes/icons/icon_github.php'?>View on GitHub</a>
             </div>
     
@@ -25,7 +25,8 @@
 
     <script src="src/js/theme_toggle.js"></script>
     <script src="src/js/mobile_menu_toggle.js"></script>
-    <script src="src/js/rotating_container.js"></script>
+    <script src="src/js/hero-rotator.js"></script>
     <script src="src/js/navbar.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>

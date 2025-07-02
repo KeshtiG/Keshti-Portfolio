@@ -2,8 +2,9 @@
 @use 'themes/light';
 
 @use 'base/base';
-@use 'base/variables';
 @use 'base/reset';
+@use 'base/variables';
+@use 'base/mixins';
 
 @use 'layout/main_nav';
 @use 'layout/hero';
@@ -11,7 +12,8 @@
 @use 'layout/main';
 
 @use 'components/theme_toggle';
-@use 'components/rotating_container';
+@use 'components/hero-rotator';
 @use 'components/project_summary';
 
 @use 'pages/index';
+@use 'pages/contact';

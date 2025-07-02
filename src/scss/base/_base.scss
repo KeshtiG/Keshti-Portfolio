@@ -6,19 +6,28 @@ h2,
 h3 {
     font-family: $font-heading;
     color: var(--text-heading);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3rem;    
 }
 
 h2 {
     font-size: 2.5rem;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 p {
     font-family: $font-body;
     color: var(--text-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
 body {
@@ -43,32 +52,53 @@ a {
     text-decoration: none;
 }
 
+.inline-link {
+    border-bottom: 2px solid var(--link);
+    font-weight: 600;
+    color: var(--text-heading);
+    transition: $transition-all-03;
+    margin-left: 0.2rem;
+
+    &:hover {
+        border-color: var(--text-heading);
+    }
+}
+
 strong {
     font-weight: 700;
     color: var(--text-heading);
 }
 
 .btn {
+    width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 
-    background-color: transparent;
-    border: 2px solid $color-link;
+    background-color: var(--link);
+    // border: 3px solid $color-link;
     border-radius: 8px;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
+    margin-top: 1rem;
 
     font-family: $font-body;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--link);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--bg-body-lighter);
     transition: $transition-all-03;
 
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
     &:hover {
-        background-color: var(--bg-body);
-        border-color: var(--accent);
+        background-color: var(--text-heading);
+        // border-color: var(--accent);
+        // color: var(--accent);
     }
 }
 

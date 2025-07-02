@@ -21,3 +21,6 @@ Thumbs.db
 # Ignore IDE folders
 .vscode/
 .idea/
+
+# Composer/Vendor
+vendor/

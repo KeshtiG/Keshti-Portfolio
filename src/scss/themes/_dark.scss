@@ -1,12 +1,14 @@
 @use "../base/variables" as *;
 
 :root {
-    --bg-body: #{$color-purple-10};
-    --bg-navbar: #{$color-purple-9};
+    --bg-body: #{$color-purple-11};
+    --bg-body-darker: #{$color-purple-12};
+    --bg-body-lighter: #{$color-purple-10};
+    --bg-navbar: #{$color-purple-10};
     --bg-footer: #{$color-purple-4};
 
     --text-heading: #{$color-purple-1};
-    --text-body: #{$color-purple-3};
+    --text-body: #{$color-purple-5};
     --text-accent: #{$color-accent};
 
 

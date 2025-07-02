@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin content-container {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-desktop-large) {
+        @include content-side-padding;
+    }
+}
+
+@mixin content-side-padding {
+    padding-left: 4%;
+    padding-right: 4%;
+}
