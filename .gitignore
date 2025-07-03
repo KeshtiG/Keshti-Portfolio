@@ -4,9 +4,8 @@ node_modules/
 # Sass cache
 *.css.map
 
-# Ignore everything in dist except style.css
-/dist/*
-!/dist/style.css
+# Ignore everything in dist
+dist/
 
 # OS / Editor junk
 .DS_Store

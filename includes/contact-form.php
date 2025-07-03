@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $mail->send();
 
-            $success = 'Message sent successfully! I will get back to you ASAP ✨.';
+            $success = 'Message sent successfully! I will get back to you ASAP ✨';
             // Clear captcha and form data
             $_SESSION['captcha'] = null;
             $_SESSION['captcha_question'] = null;
@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="contact-form__button btn"><?php include 'includes/icons/icon_send.php' ?>Send Message</button>
         </form>
     <?php endif ?>
-    
+
     <?php if ($errors): ?>
         <ul class="contact-form__errors">
             <?php foreach ($errors as $error): ?>

@@ -6,7 +6,7 @@ h2,
 h3 {
     font-family: $font-heading;
     color: var(--text-heading);
-    font-weight: 700;
+    font-weight: 700 !important;
     line-height: 1.2;
 }
 

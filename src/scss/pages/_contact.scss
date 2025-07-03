@@ -40,7 +40,8 @@
         }
 
         @media (max-width: $breakpoint-tablet) {
-            width: 50%;
+            width: 80%;
+            margin-top: 3rem;
         }
     }
 
@@ -115,12 +116,6 @@
         color: var(--text-heading);
         margin-top: 3rem;
     }
-
-    // &__errors {
-    //     font-size: 1.5rem;
-    //     color: var(--text-heading);
-    //     margin-top: 3rem;
-    // }
 
     textarea {
         resize: vertical;
