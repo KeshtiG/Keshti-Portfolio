@@ -26,3 +26,7 @@ vendor/
 
 # Config
 config.php
+
+# Deployment stuff
+.rsync-exclude
+deploy.sh

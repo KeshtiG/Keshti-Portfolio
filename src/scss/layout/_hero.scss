@@ -2,12 +2,7 @@
 @use "../base/mixins" as *;
 
 .hero {
-    background-image: radial-gradient(circle at 44% 67%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 30%, transparent 30%, transparent 34%, transparent 34%, transparent 100%),
-        radial-gradient(circle at 33% 92%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 16%, transparent 16%, transparent 53%, transparent 53%, transparent 100%),
-        radial-gradient(circle at 0% 46%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 42%, transparent 42%, transparent 61%, transparent 61%, transparent 100%),
-        radial-gradient(circle at 47% 44%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 96%, transparent 96%, transparent 97%, transparent 97%, transparent 100%),
-        radial-gradient(circle at 34% 28%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 26%, transparent 26%, transparent 85%, transparent 85%, transparent 100%),
-        linear-gradient(363deg, rgb(24, 19, 30), rgb(0, 0, 0));
+    background-image: radial-gradient(circle at 44% 67%, rgba(54, 41, 61, 0.06) 0%, rgb(53 42 61 / 6%) 30%, transparent 30%, transparent 34%, transparent 34%, transparent 100%), radial-gradient(circle at 33% 92%, rgba(54, 41, 61, 0.06) 0%, rgb(62 51 69 / 6%) 16%, transparent 16%, transparent 53%, transparent 53%, transparent 100%), radial-gradient(circle at 0% 46%, rgba(54, 41, 61, 0.06) 0%, rgb(50 37 57 / 6%) 42%, transparent 42%, transparent 61%, transparent 61%, transparent 100%), radial-gradient(circle at 47% 44%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 96%, transparent 96%, transparent 97%, transparent 97%, transparent 100%), radial-gradient(circle at 34% 28%, rgba(54, 41, 61, 0.06) 0%, rgba(54, 41, 61, 0.06) 26%, transparent 26%, transparent 85%, transparent 85%, transparent 100%), linear-gradient(363deg, rgb(24, 19, 30), rgb(0, 0, 0));
     width: 100%;
     display: flex;
     justify-content: center;

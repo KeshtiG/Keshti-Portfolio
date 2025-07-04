@@ -19,5 +19,5 @@ setInterval(() => {
   }, 600)
 
   currentIndex = nextIndex
-}, 3000)
+}, 2000)
 

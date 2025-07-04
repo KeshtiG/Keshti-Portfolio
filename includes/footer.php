@@ -27,6 +27,5 @@
     <script src="src/js/mobile_menu_toggle.js"></script>
     <script src="src/js/hero-rotator.js"></script>
     <script src="src/js/navbar.js"></script>
-    <script src="src/js/script.js"></script>
 </body>
 </html>
